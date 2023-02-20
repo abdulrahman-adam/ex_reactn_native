@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={classes.container}>
+      <Text style={classes.texte}>Bonjour!</Text>
+      <Button onPress={() => alert("Clique!")} title="Cliques moi"></Button>
       <StatusBar style="auto" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+// 1 ere: Les composants natifs
+// 2 eme: Les événements
+// 3 eme le style: inLine style, StyleSheet
+
+const classes = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: "50%",
+    backgroundColor: "red",
+    marginTop: 100,
+  },
+
+  texte: {
+    color: "green",
   },
 });
